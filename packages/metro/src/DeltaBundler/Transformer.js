@@ -71,6 +71,7 @@ class Transformer {
     const cache = this._cache;
 
     const {
+      constantFolding,
       customTransformOptions,
       dev,
       experimentalImportSupport,
@@ -101,6 +102,7 @@ class Transformer {
       // Path.
       localPath,
 
+      constantFolding,
       customTransformOptions,
       dev,
       experimentalImportSupport,

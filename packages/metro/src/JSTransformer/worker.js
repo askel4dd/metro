@@ -74,6 +74,7 @@ import type {CustomTransformOptions} from 'metro-babel-transformer';
 export type {CustomTransformOptions} from 'metro-babel-transformer';
 
 export type JsTransformOptions = $ReadOnly<{|
+  constantFolding?: boolean,
   customTransformOptions?: CustomTransformOptions,
   dev: boolean,
   disableFlowStripTypesTransform?: boolean,
@@ -233,7 +234,7 @@ class JsTransformer {
       plugins.push([inlineRequiresPlugin, opts]);
     }
 
-    if (!options.dev) {
+    if (!options.dev && options.constantFolding) {
       plugins.push([constantFoldingPlugin, opts]);
     }
 

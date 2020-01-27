@@ -85,6 +85,7 @@ async function calcTransformerOptions(
 
   return {
     ...baseOptions,
+    constantFolding: transform.constantFolding !== false,
     inlineRequires: transform.inlineRequires || false,
     experimentalImportSupport: transform.experimentalImportSupport || false,
     unstable_disableES6Transforms:

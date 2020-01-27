@@ -79,6 +79,7 @@ const getDefaultValues = (projectRoot: ?string): ConfigT => ({
     experimentalImportBundleSupport: false,
     getTransformOptions: async () => ({
       transform: {
+        constantFolding: true,
         experimentalImportSupport: false,
         inlineRequires: false,
         unstable_disableES6Transforms: false,

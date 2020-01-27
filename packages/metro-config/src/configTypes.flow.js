@@ -52,6 +52,7 @@ type ExtraTransformOptions = {
   +preloadedModules: {[path: string]: true, ...} | false,
   +ramGroups: Array<string>,
   +transform: {|
+    +constantFolding?: boolean,
     +experimentalImportSupport: boolean,
     +inlineRequires: {+blacklist: {[string]: true, ...}, ...} | boolean,
     +unstable_disableES6Transforms?: boolean,
